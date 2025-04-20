@@ -1,77 +1,72 @@
-💬 ChatBot GPT
-A FastAPI + OpenAI GPT-powered chatbot with a modular front-end design.
+# 💬 ChatBot GPT
 
-🌐 Live Demo: https://chat-bot-gpt-1.onrender.com
+A simple chatbot web app built using **FastAPI** and **OpenAI's GPT API**, with a clean modular structure and deployment on Render.
 
-🧠 Features
-FastAPI backend to process GPT requests
+**🌐 Live Demo**: [https://chat-bot-gpt-1.onrender.com](https://chat-bot-gpt-1.onrender.com)
 
-Jinja2-based HTML templates (layout.html, navbar.html)
+---
 
-CSS and JS are loaded from .txt files for simplicity
+## 🧠 Features
 
-Deployed using Render
+- FastAPI backend to handle GPT queries  
+- Modular Jinja2-based HTML templates  
+- CSS and JavaScript are stored in `.txt` files and injected dynamically  
+- Deployed on Render  
+- Lightweight, easy to extend with new routes (e.g., image input, authentication)
 
-Easy to extend with image routes, authentication, or chat history
+---
 
-📁 Project Structure
-graphql
+## 📁 Project Structure
+
+chat-bot-gpt/ ├── first.py # FastAPI application ├── requirements.txt # Python dependencies ├── templates/ # HTML templates (Jinja2) │ ├── home.html │ ├── image.html │ ├── layout.html │ └── navbar.html ├── resources/ # JS and CSS stored as .txt │ ├── css_code.txt │ ├── final_js_code.txt │ └── first_js_code.txt └── .gitignore
+
+yaml
 Копіювати
 Редагувати
-chat-bot-gpt/
-├── first.py                  # Main FastAPI app
-├── requirements.txt          # Python dependencies
-├── templates/                # HTML templates (Jinja2)
-│   ├── home.html
-│   ├── image.html
-│   ├── layout.html
-│   └── navbar.html
-├── resources/                # JS and CSS code in .txt format
-│   ├── css_code.txt
-│   ├── final_js_code.txt
-│   └── first_js_code.txt
-└── .gitignore
-🚀 How to Run Locally
-1. Clone the repo
-bash
-Копіювати
-Редагувати
+
+---
+
+## 🚀 How to Run Locally
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/uliana0203/chat-bot-gpt.git
 cd chat-bot-gpt
-2. Create and activate virtual environment
+2. Create and activate a virtual environment
 bash
 Копіювати
 Редагувати
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate       # On Windows: venv\Scripts\activate
 3. Install dependencies
 bash
 Копіювати
 Редагувати
 pip install -r requirements.txt
 4. Set your OpenAI API key
-In terminal or .env file:
+In your terminal or a .env file:
 
 bash
 Копіювати
 Редагувати
-export OPENAI_API_KEY=your_key_here
+export OPENAI_API_KEY=your_api_key_here
 5. Run the app
 bash
 Копіювати
 Редагувати
 uvicorn first:app --reload
-Then open http://127.0.0.1:8000 in your browser.
+Open your browser and visit: http://127.0.0.1:8000
 
 🌍 Deployment
-The app is deployed using Render.
+This app is deployed using Render.
 
 🔗 Live version: https://chat-bot-gpt-1.onrender.com
 
 📝 Notes
-JS and CSS are stored in text files and dynamically injected
+JS and CSS are loaded from text files and injected into HTML dynamically
 
-Layout uses partials (layout.html) for modular front-end design
+Layouts are managed using layout.html and partials for maintainability
 
-Ideal for experimentation and rapid prototyping with GPT
+Great for experimenting with GPT-based chatbot UIs
 
