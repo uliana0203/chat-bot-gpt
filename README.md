@@ -1,22 +1,23 @@
 💬 ChatBot GPT
+A FastAPI + OpenAI GPT-powered chatbot with a modular front-end design.
 
-A FastAPI + OpenAI GPT-powered chatbot web app with modular design and clean deployment.
-
-🔗 Live Demo: https://chat-bot-gpt-1.onrender.com
+🌐 Live Demo: https://chat-bot-gpt-1.onrender.com
 
 🧠 Features
-🧾 FastAPI backend to handle GPT queries
+FastAPI backend to process GPT requests
 
-🧱 Modular HTML templates via Jinja2 (layout.html, navbar.html)
+Jinja2-based HTML templates (layout.html, navbar.html)
 
-💅 CSS and JS loaded from .txt files in /resources
+CSS and JS are loaded from .txt files for simplicity
 
-🌐 Deployed on Render and publicly accessible
+Deployed using Render
 
-🧩 Easy to extend with new input types or routes
+Easy to extend with image routes, authentication, or chat history
 
-🗂 Project Structure
-
+📁 Project Structure
+graphql
+Копіювати
+Редагувати
 chat-bot-gpt/
 ├── first.py                  # Main FastAPI app
 ├── requirements.txt          # Python dependencies
@@ -30,44 +31,47 @@ chat-bot-gpt/
 │   ├── final_js_code.txt
 │   └── first_js_code.txt
 └── .gitignore
-
 🚀 How to Run Locally
 1. Clone the repo
+bash
+Копіювати
+Редагувати
 git clone https://github.com/uliana0203/chat-bot-gpt.git
 cd chat-bot-gpt
-
 2. Create and activate virtual environment
+bash
+Копіювати
+Редагувати
 python -m venv venv
-source venv/bin/activate       # On Windows: venv\Scripts\activate
-
-3. Install requirements
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. Install dependencies
 bash
 Копіювати
 Редагувати
 pip install -r requirements.txt
-4. Set OpenAI API key
-Add to terminal or create .env file:
+4. Set your OpenAI API key
+In terminal or .env file:
 
 bash
 Копіювати
 Редагувати
 export OPENAI_API_KEY=your_key_here
-5. Launch the app
+5. Run the app
 bash
 Копіювати
 Редагувати
 uvicorn first:app --reload
-Then go to: http://127.0.0.1:8000
+Then open http://127.0.0.1:8000 in your browser.
 
-📦 Deployment
-This app is deployed on Render:
+🌍 Deployment
+The app is deployed using Render.
 
-👉 Try it now: https://chat-bot-gpt-1.onrender.com
+🔗 Live version: https://chat-bot-gpt-1.onrender.com
 
-📌 Notes
+📝 Notes
 JS and CSS are stored in text files and dynamically injected
 
-Layout uses layout.html + partials for clean separation of structure
+Layout uses partials (layout.html) for modular front-end design
 
-Designed for experimentation and rapid prototyping with GPT
+Ideal for experimentation and rapid prototyping with GPT
 
